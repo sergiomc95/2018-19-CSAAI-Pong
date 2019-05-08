@@ -6,8 +6,39 @@ function main()
   canvas.width = 600;
   canvas.height = 400;
 
-  //-- Obtener el contexto del canvas
-  var ctx = canvas.getContext("2d");
+
+    //-- Obtener el contexto del canvas
+var ctx = canvas.getContext("2d");
+
+
+
+
+
+
+var jugador1 = {
+
+var ctx = jugador1.getContext("2d");
+  ctx.beginPath();
+ctx.moveTo(10, 150);
+ctx.lineTo(30, 10);
+ctx.stroke();
+}
+
+var jugador2 ={
+//  x:590, y:150, width: 15, height:80, color: '#FFFFFF', gravity:2
+var ctx = jugador2.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(10, 150);
+ctx.lineTo(30, 10);
+ctx.stroke();
+
+
+
+}
+
+
+
+
 
   //-- Definir el objeto BOLA
   var bola = {
@@ -106,4 +137,24 @@ function main()
       },20); //-- timer
     }
   } //-- Fin onclick
+
+
+  function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  draw(jugador1);
+  draw(jugador2);
+
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
